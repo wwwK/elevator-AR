@@ -31,3 +31,6 @@ export const ave_time = (data) => {
 export const low_qual = (data) => {
   return request({ method: "get", url: "/work/low_qual", data });
 };
+export const ele_type = (data) => {
+  return request({ method: "get", url: "/work/ele_type", data });
+};

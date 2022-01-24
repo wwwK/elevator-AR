@@ -224,7 +224,7 @@
 </template>
 
 <script>
-import { ave_time, low_qual } from "@/api/user.js";
+import { ave_time, low_qual, ele_type } from "@/api/user.js";
 import "@/styles/search.less";
 export default {
   created() {
@@ -234,20 +234,21 @@ export default {
     async getTime() {
       const res = await ave_time();
       const res2 = await low_qual();
+      const res3 = await ele_type();
+
       this.ave_time.jinri = res.data.message.t_today;
       this.ave_time.benzhou = res.data.message.t_week;
       this.ave_time.benyue = res.data.message.t_month;
       this.low_qual.jinri = res2.data.message[0].length;
       this.low_qual.benzhou = res2.data.message[1].length;
       this.low_qual.benyue = res2.data.message[2].length;
-      console.log(res);
     },
   },
   data() {
     return {
       ave_time: { jinri: "", benzhou: "", benyue: "" },
       low_qual: { jinri: "", benzhou: "", benyue: "" },
-
+      type_count: [],
       value1: 0,
       option1: [
         { text: "今日", value: 0 },

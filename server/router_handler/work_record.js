@@ -18,3 +18,11 @@ exports.low_qual = (req, res) => {
     }
   );
 };
+exports.ele_type = (req, res) => {
+  sql =
+    "SELECT ele_type FROM myelevator.elevator LEFT OUTER JOIN myelevator.check_record ON unique_id=ele_id where checker=?";
+  db.query(sql, req.user.ming, (err, results) => {
+    if (err) return res.cc(err);
+    res.cc(results, 0);
+  });
+};
