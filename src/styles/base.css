@@ -1,0 +1,310 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+@font-face {
+  font-family: "iconfont";
+  /* Project id 2906180 */
+  src: url("//at.alicdn.com/t/font_2906180_rfd6j010ule.woff2?t=1636966973858") format("woff2"), url("//at.alicdn.com/t/font_2906180_rfd6j010ule.woff?t=1636966973858") format("woff"), url("//at.alicdn.com/t/font_2906180_rfd6j010ule.ttf?t=1636966973858") format("truetype");
+}
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.icon-u1090:before {
+  content: "\e61a";
+}
+.icon-u1555:before {
+  content: "\e619";
+}
+.icon-u1492_disabled:before {
+  content: "\e618";
+}
+.icon-u308:before {
+  content: "\e611";
+}
+.icon-u332:before {
+  content: "\e616";
+}
+.icon-u320:before {
+  content: "\e617";
+}
+.icon-woderenwu:before {
+  content: "\e615";
+}
+.icon-u191:before {
+  content: "\e612";
+}
+.icon-u187:before {
+  content: "\e613";
+}
+.icon-u183:before {
+  content: "\e614";
+}
+.icon-u103:before {
+  content: "\e610";
+}
+.icon-u105:before {
+  content: "\e60f";
+}
+.icon-zhongzhimima:before {
+  content: "\e60d";
+}
+.icon-u551:before {
+  content: "\e60c";
+}
+.icon-u59:before {
+  content: "\e60e";
+}
+.icon-u45:before {
+  content: "\e609";
+}
+.icon-u43:before {
+  content: "\e60a";
+}
+.icon-u44:before {
+  content: "\e60b";
+}
+.icon-a-1:before {
+  content: "\e608";
+}
+.icon-u55:before {
+  content: "\e606";
+}
+.icon-u51:before {
+  content: "\e607";
+}
+.icon-touxiang_u20:before {
+  content: "\e604";
+}
+.result {
+  margin: 10px 0px;
+  background-color: #eaf9ff;
+  border-radius: 30px;
+  padding: 1px;
+}
+.result-gaikuang {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 30px 18px 15px 18px;
+  box-sizing: border-box;
+}
+.result-gaikuang .gaikuang-left {
+  color: #004e79;
+}
+.result-gaikuang .gaikuang-left i {
+  vertical-align: middle;
+}
+.result-gaikuang .gaikuang-left .iconfont {
+  font-size: 36px;
+}
+.result-gaikuang .gaikuang-left i:nth-child(3) {
+  font-size: 18px;
+  margin-left: 12px;
+}
+.result-gaikuang .fanye {
+  color: #169bd5;
+  font-size: 16px;
+}
+.result-gaikuang .fanye i:nth-child(2) {
+  margin-left: 15px;
+}
+.search {
+  width: 587px;
+  height: 103px;
+  background-color: #b9eaff;
+  margin-left: 20px;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 10px;
+  margin-bottom: 30px;
+}
+.search div:nth-child(1) {
+  margin-left: 10px;
+  line-height: 13px;
+}
+.search div:nth-child(1) i:first-child {
+  color: #333;
+  font-size: 13px;
+  font-weight: 650;
+  line-height: 18px;
+}
+.search div:nth-child(1) i:nth-of-type(2) {
+  color: #7f7f7f;
+  font-size: 12px;
+  font-weight: 650;
+}
+.search div:nth-child(1) a {
+  color: #2f4bff;
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 25px;
+}
+.search div:nth-child(1) i:last-child {
+  color: #004e79;
+  font-size: 11px;
+  font-weight: 400;
+}
+.search div:nth-child(1) i:last-child a {
+  margin-left: 5px;
+  color: #0399b6;
+}
+.search div:nth-of-type(2) {
+  margin-right: 10px;
+  font-size: 12px;
+  color: #797979;
+  line-height: 18px;
+}
+.search div:nth-of-type(2) i:first-child {
+  line-height: 20px;
+}
+.search div:nth-of-type(2) i:nth-of-type(3) {
+  color: #015478;
+}
+.search div:nth-of-type(2) div {
+  line-height: 30px;
+}
+.search div:nth-of-type(2) div i:first-child {
+  font-size: 18px;
+  color: #46b03b;
+  font-weight: 650;
+}
+.search div:nth-of-type(2) div i:last-child {
+  margin-left: 30px;
+  color: #2f4bff;
+}
+.title {
+  height: 100px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+}
+.title .huanying {
+  margin-left: 10px;
+}
+.title .huanying h1 {
+  font-size: 32px;
+  margin: 0 0 0px 10px;
+}
+.iconfont {
+  font-size: 30px;
+  line-height: 30px;
+}

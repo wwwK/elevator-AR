@@ -1,0 +1,98 @@
+.jihua {
+  margin-top: 20px;
+}
+.jihua i:nth-of-type(2) b {
+  color: #027db4;
+}
+.jihua i:nth-of-type(3) b {
+  color: #d9001b;
+}
+.jihua i {
+  font-size: 24px;
+  line-height: 36px;
+}
+.jindu {
+  margin-top: 20px;
+}
+.jindu i {
+  font-size: 24px;
+  line-height: 36px;
+}
+.research b {
+  font-size: 14px;
+  line-height: 14px;
+  color: #333;
+}
+.zongjindu {
+  display: flex;
+  justify-content: space-between;
+}
+.sousuokuang {
+  height: 38px;
+}
+ /deep/ .van-search__content {
+  height: 22px;
+}
+ /deep/ .van-cell--borderless {
+  padding: 0;
+}
+.xinxi {
+  display: flex;
+  margin-left: 100px;
+}
+.xinxi i {
+  color: #169bd5;
+}
+.xianshi {
+  margin-right: 20px;
+}
+.xianshi i {
+  margin-right: 5px;
+}
+.fanye i {
+  margin-left: 16px;
+}
+.hezi {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: linear-gradient(90deg, #fdffb4, #fff);
+}
+.dizhi {
+  font-size: 13px;
+  font-weight: 650;
+}
+.xinghao {
+  font-size: 11px;
+  color: #7f7f7f;
+  font-weight: 650;
+}
+.id {
+  font-size: 14px;
+  color: #015478;
+  font-weight: 700;
+}
+.jianyan {
+  font-size: 14px;
+  font-weight: 200;
+}
+.jianyan a {
+  font-size: 14px;
+  color: #d9001b;
+  margin: 0 5px;
+}
+.xiangqing {
+  font-size: 13px;
+  color: #169bd5;
+}
+.diantixiangqing {
+  display: flex;
+  margin-left: 5px;
+}
+.diantiweizhi {
+  margin-left: 10px;
+}
+.jianyancishu {
+  text-align: right;
+  margin-right: 10px;
+}

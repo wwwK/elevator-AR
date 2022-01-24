@@ -1,0 +1,13 @@
+.title {
+  height: 100px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+}
+.title .huanying {
+  margin-left: 10px;
+}
+.title .huanying h1 {
+  font-size: 32px;
+  margin: 0 0 0px 10px;
+}
