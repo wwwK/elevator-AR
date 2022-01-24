@@ -8,9 +8,13 @@ exports.ave_time = (req, res) => {
 };
 exports.low_qual = (req, res) => {
   sql =
-    "select *  from check_record where check_date=NOW() and state='不合格'  and check_record.`checker` LIKE ? ";
-  db.query(sql, req.user.ming, (err, results) => {
-    if (err) return res.cc(err);
-    res.cc(results[0], 0);
-  });
+    "SELECT * from myelevator.check_record where to_days(now())-to_days(check_date)<1  and state='不合格' and checker=?;select * from myelevator.check_record where check_date between current_date()-7 and sysdate() and state='不合格' and checker=?;SELECT * FROM myelevator.check_record where DATE_SUB(CURDATE(), INTERVAL 30 DAY) <= date(check_date) and state='不合格' and checker=?";
+  db.query(
+    sql,
+    [req.user.ming, req.user.ming, req.user.ming],
+    (err, results) => {
+      if (err) return res.cc(err);
+      res.cc(results, 0);
+    }
+  );
 };
