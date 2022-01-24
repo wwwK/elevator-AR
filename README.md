@@ -1,19 +1,5 @@
-# project
+基于 AR 眼镜的电梯维保技术可视化项目-------elevator AR+
 
-## Project setup
-```
-npm install
-```
+曹同学人生中第一个项目！且看且珍惜
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+简介：[该项目为全栈项目，技术栈为：vue2.0，nodejs，mysql，vant 以及 axios。物理分辨率为 712*534]
