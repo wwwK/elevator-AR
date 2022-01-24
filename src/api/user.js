@@ -28,3 +28,6 @@ export const count = (data) => {
 export const ave_time = (data) => {
   return request({ method: "get", url: "/work/ave_time", data });
 };
+export const low_qual = (data) => {
+  return request({ method: "get", url: "/work/low_qual", data });
+};

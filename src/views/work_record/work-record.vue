@@ -78,12 +78,18 @@
           <div class="buhege-left">
             <i>您检验的不合格电梯</i>
             <div class="buhegeshuliang">
-              <div class="jinri"><i>今日</i><br /><i>1台(9%)</i></div>
+              <div class="jinri">
+                <i>今日</i><br /><i>{{ this.low_qual.jinri }}台(9%)</i>
+              </div>
               <div class="benzhoujinri">
-                <i>本周平均每日</i><br /><i>9台(8.5%)</i>
+                <i>本周平均每日</i><br /><i
+                  >{{ this.low_qual.benzhou }}台(8.5%)</i
+                >
               </div>
               <div class="benyuejinri">
-                <i>本月平均每日</i><br /><i>18台(7.3%)</i>
+                <i>本月平均每日</i><br /><i
+                  >{{ this.low_qual.benyue }}台(7.3%)</i
+                >
               </div>
             </div>
           </div>
@@ -218,7 +224,7 @@
 </template>
 
 <script>
-import { ave_time } from "@/api/user.js";
+import { ave_time, low_qual } from "@/api/user.js";
 import "@/styles/search.less";
 export default {
   created() {
@@ -227,15 +233,21 @@ export default {
   methods: {
     async getTime() {
       const res = await ave_time();
+      const res2 = await low_qual();
       this.ave_time.jinri = res.data.message.t_today;
       this.ave_time.benzhou = res.data.message.t_week;
       this.ave_time.benyue = res.data.message.t_month;
+      this.low_qual.jinri = res2.data.message[0].length;
+      this.low_qual.benzhou = res2.data.message[1].length;
+      this.low_qual.benyue = res2.data.message[2].length;
       console.log(res);
     },
   },
   data() {
     return {
-      ave_time: { jinri: "1", benzhou: "2", benyue: "3" },
+      ave_time: { jinri: "", benzhou: "", benyue: "" },
+      low_qual: { jinri: "", benzhou: "", benyue: "" },
+
       value1: 0,
       option1: [
         { text: "今日", value: 0 },
