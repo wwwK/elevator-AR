@@ -3,7 +3,7 @@ const db = mysql.createPool({
   host: "127.0.0.1",
   user: "root",
   password: "admin123",
-  database: "elevator",
+  database: "myelevator",
   multipleStatements: true,
 });
 module.exports = db;
