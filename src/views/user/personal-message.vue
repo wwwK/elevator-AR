@@ -130,27 +130,21 @@ export default {
   name: "redirected",
   watch: {
     "$store.state.userInfo.username"(newVal) {
-      console.log(newVal);
       this.newInfo.username = newVal;
     },
     "$store.state.userInfo.password"(newVal) {
-      console.log(newVal);
       this.newInfo.password = newVal;
     },
     "$store.state.userInfo.place"(newVal) {
-      console.log(newVal);
       this.newInfo.place = newVal;
     },
     "$store.state.userInfo.IDcard"(newVal) {
-      console.log(newVal);
       this.newInfo.IDcard = newVal;
     },
     "$store.state.userInfo.xing"(newVal) {
-      console.log(newVal);
       this.newInfo.xing = newVal;
     },
     "$store.state.userInfo.ming"(newVal) {
-      console.log(newVal);
       this.newInfo.ming = newVal;
     },
   },
@@ -213,7 +207,6 @@ export default {
         else if (this.slidervalue !== 100) this.$toast.fail("请滑动滑块");
         else {
           const res = await redirect(this.newInfo);
-          console.log(res);
           if (res.data.status == 1)
             this.$toast.fail("输入信息有误，请检查后提交");
           else {

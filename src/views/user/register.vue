@@ -183,14 +183,12 @@ export default {
         forbidClick: true,
         duration: 0,
       });
-      console.log(this.onFormData.na);
       try {
         if (this.onFormData.password !== this.onFormData.repassword)
           this.$toast.fail("两次输入的密码不同，请重新输入");
         else if (this.slidervalue !== 100) this.$toast.fail("请滑动滑块");
         else {
           const res = await register(this.onFormData);
-          console.log(res);
           if (res.data.status == 1)
             this.$toast.fail("输入信息有误，请检查后提交");
           else {

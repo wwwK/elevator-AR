@@ -84,12 +84,10 @@ export default {
           this.$toast.fail("用户名或密码错误");
         } else {
           this.$toast.success("登录成功");
-          console.log(res);
           // 获取token以及用户信息
           const token = res.data.token;
           // 解析token
           const decode = jwt_decode(token);
-          console.log(decode);
           // 将以上信息上传到vueX中
           this.changeLogin({
             Authorization: token,

@@ -106,8 +106,8 @@
             ><i slot="nav-left">您检验的型号</i>
             <van-tab title="本日">
               <div class="diantixinghao">
-                <i v-for="item in xinghao" :key="item.id"
-                  >{{ item.id }}.{{ item.xinghao }} </i
+                <i v-for="(item, index) in ele_type" :key="item.id"
+                  >{{ parseInt(index) + 1 }}.{{ item.ele_type }} </i
                 ><i>其他</i>
               </div>
             </van-tab>
@@ -235,7 +235,23 @@ export default {
       const res = await ave_time();
       const res2 = await low_qual();
       const res3 = await ele_type();
-
+      const a = res3.data.message;
+      // 实现对电梯型号数目总计的统计
+      for (var i = 0; i < a.length; i++) {
+        this.ele_type[i] = a[i];
+      }
+      for (var j = 0; j < a.length; j++) {
+        this.ele_type[j].count = 1;
+        for (var k = j + 1; k < a.length; k++) {
+          if (this.ele_type[j].ele_type == this.ele_type[k].ele_type) {
+            this.ele_type[k].ele_type = "";
+            this.ele_type[j].count++;
+          }
+        }
+      }
+      for (var i = 0; i < a.length; i++) {
+        if (this.ele_type[i].ele_type == "") this.ele_type[i].count = 0;
+      }
       this.ave_time.jinri = res.data.message.t_today;
       this.ave_time.benzhou = res.data.message.t_week;
       this.ave_time.benyue = res.data.message.t_month;
@@ -248,7 +264,8 @@ export default {
     return {
       ave_time: { jinri: "", benzhou: "", benyue: "" },
       low_qual: { jinri: "", benzhou: "", benyue: "" },
-      type_count: [],
+      ele_type: {},
+
       value1: 0,
       option1: [
         { text: "今日", value: 0 },

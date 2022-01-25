@@ -74,7 +74,6 @@ export default {
         const res2 = await count(this.post);
         this.count.unshift(res2.data.message.length);
         this.list[j].count = this.count[j];
-        console.log(this.count);
         this.$forceUpdate();
       }
     },

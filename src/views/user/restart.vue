@@ -78,7 +78,6 @@ export default {
             this.$toast.fail("密码不一致！");
           } else {
             const res = await restart(this.formData);
-            console.log(res);
             if (res.data.status == 2) this.$toast.fail("密码不能相同！");
             else {
               if (res.data.status == 1) {
